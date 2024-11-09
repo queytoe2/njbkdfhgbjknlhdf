@@ -190,7 +190,7 @@ local Tables = {
                 end
             end]]
         end;
-        StatsImprover = function()
+        --[[StatsImprover = function()
             repeat task.wait(0.1) until Players.LocalPlayer:FindFirstChild("leaderstats")
     
             local numofstats = 0
@@ -204,6 +204,7 @@ local Tables = {
             local playerlist = coregui:FindFirstChild("RoactAppExperimentProvider") or coregui:FindFirstChild("PlayerList")
             local Teams = game:GetService("Teams")
             local plrlistmaster = playerlist:FindFirstChild("PlayerListMaster") or playerlist:FindFirstChild("Children")
+            local offsetframe = plrlistmaster:FindFirstChild("OffsetFrame") or playerlistmaster:FindFirstChild("Children")
             local plrsandteams = plrlistmaster.OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame.OffsetUndoFrame
             local titlebar = plrlistmaster.OffsetFrame.PlayerScrollList.SizeOffsetFrame:WaitForChild("TitleBar")
             local suffixes = {'','K+','M+','B+','T+','qd+','Qn+','sx+','Sp+','O+','N+','de+','Ud+','DD+','tdD+','qdD+','QnD+','sxD+','SpD+','OcD+','NvD+','Vgn+','UVg+','DVg+','TVg+','qtV+','QnV+','SeV+','SPG+','OVG+','NVG+','TGN+','UTG+','DTG+','tsTG+','qtTG+','QnTG+','ssTG+','SpTG+','OcTG+','NoAG+','UnAG+','DuAG+','TeAG+','QdAG+','QnAG+','SxAG+','SpAG+','OcAG+','NvAG+','CT+'}
@@ -422,7 +423,7 @@ local Tables = {
                     UpdatePlayerListSize()
                 end
             end)
-        end;
+        end;]]
         Spy = function()
             enabled = true
             spyOnMyself = true
